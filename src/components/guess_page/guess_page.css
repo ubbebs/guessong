@@ -1,0 +1,62 @@
+.guesser {
+    margin-top: 100px;
+    height: calc(100vh - 100px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.guesser-box {
+    height: auto;
+    width: 600px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+}
+
+.guesser-box-correct {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.guesser-box-correct-content {
+    padding: 40px;
+    background-color: #111;
+    border: 1px solid green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.guesser-box-wrong {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(17,17,17,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.guesser-box-wrong-content {
+    padding: 40px;
+    background-color: #111;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

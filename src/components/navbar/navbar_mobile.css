@@ -1,0 +1,13 @@
+.navbar_mobile {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 30px;
+    box-sizing: border-box;
+    z-index: 50;
+    background-color: #111;
+}

@@ -1,0 +1,75 @@
+.home {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #111;
+}
+
+.home-main {
+    height: auto;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: initial;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+}
+
+.home-main-title {
+    letter-spacing: 5px;
+    font-size: 25px;
+    padding: 0;
+    margin: 10px;
+    font-weight: 900;
+}
+
+.home-main-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.all {
+    height: 260px!important;
+    width: 100%;
+}
+
+@media screen and (max-width: 1300px) {
+    .home-main {
+        max-width: 600px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .home-main {
+        width: 100%;
+    }
+
+    .home-main-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .all {
+        height: 60px!important;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .artist-item-sign, .album-item-sign {
+        width: 100%;
+    }
+}

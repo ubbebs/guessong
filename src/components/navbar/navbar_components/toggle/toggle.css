@@ -1,0 +1,15 @@
+.toggle-button {
+    position: relative;
+    height: 32px;
+    width: 32px;
+    background-color: red;
+    z-index: 10;
+}
+
+.toggle-button2 {
+    position: relative;
+    height: 32px;
+    width: 32px;
+    background-color: blue;
+    z-index: 10;
+}

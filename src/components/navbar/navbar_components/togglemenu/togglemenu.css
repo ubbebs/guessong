@@ -1,0 +1,15 @@
+.navbar-list {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    
+}
+
+.n-l-show {
+    top: 100px;
+}
+
+.n-l-hide {
+    top: -100%;
+}

@@ -1,0 +1,161 @@
+.guesser-box-progress {
+    width: 100%;
+    height: 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    justify-content: flex-start;
+}
+
+.guesser-box-progress-bar {
+    width: 0%;
+    height: 10px;
+    background-color: #0f0;
+    transition: 1s;
+    border-radius: 5px;
+}
+
+.guesser-box-answer {
+    height: 280px;
+    width: 100%;
+    position: relative;
+}
+
+.guesser-box-answer-quote {
+    position: absolute;
+    flex-direction: column;
+    top: 0;
+    bottom: 0;
+    margin: 0 auto;
+    transition: 1s;
+    user-select: none;
+}
+
+.guesser-box-answer-quote > p {
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-shadow: 0px 0px 10px #000;
+}
+
+.guesser-box-answer-correct {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    opacity: 0;
+    transition: 1s;
+}
+
+.guesser-box-answer-background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/2087/2087858.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100px;
+    opacity: 0.3;
+}
+
+.guesser-box-answer-correct-cover {
+    height: 200px;
+    width: 200px;
+    background-size: cover;
+}
+
+.guesser-box-answer-correct-info {
+    flex-grow: 1;
+    flex-direction: column;
+    text-align: initial;
+    padding: 20px;
+}
+
+.guesser-box-answer-correct-info .title {
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+.guesser-box-answer-correct-info p {
+    font-size: 12px;
+    text-shadow: 0px 0px 10px #000;
+}
+
+.guesser-box-answer-correct-info img {
+    height: 25px;
+    margin-right: 10px;
+}
+
+.answer-correct-content {
+    padding: 40px;
+    background-color: #111;
+    border: 1px solid green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.answer-correct-content > .img {
+    height: 300px;
+    width: 300px;
+}
+
+
+
+.guesser_box_quote > p {
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.guesser-buttons-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.guesser-buttons-box-button {
+    width: 46%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+    color: #fff;
+    background: none;
+    border: 1px solid #fff;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.next {
+    cursor: pointer;
+}
+
+.skip{
+    border: none;
+}
+
+@media screen and (max-width: 600px) {
+    .guesser-buttons-box {
+        flex-direction: column;
+    }
+
+    .guesser-buttons-box-button {
+        width: 100%;
+        margin: 0px;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+}

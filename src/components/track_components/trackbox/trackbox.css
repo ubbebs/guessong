@@ -1,0 +1,22 @@
+.trackbox {
+    display: flex;
+    border-bottom: solid 1px #fff;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.trackName {
+    color: #fff;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-bottom: 2px;
+    margin: 0;
+}
+
+.trackDetails {
+    color: #aaa;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    margin: 0;
+    font-size: 13px;
+}
