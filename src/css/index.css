@@ -14,6 +14,7 @@ body {
   transition: var(--transition);
   font-family: 'Alata', sans-serif;
   font-weight: 100;
+  overflow-x: hidden;
 }
 
 a, a:link, a:active, a:visited, a:hover {
