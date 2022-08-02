@@ -31,12 +31,13 @@
 .artist-data {
     min-height: 100vh;
     width: 100%;
+    min-width: 100vw;
     display: flex;
 }
 
 .artist-data-box {
     height: auto;
-    width: 40%;
+    width: 500px;
     min-width: 250px;
     box-sizing: border-box;
     display: flex;
@@ -48,7 +49,7 @@
 
 .artist-coverborder {
     padding: 5px;
-    background-image: linear-gradient(to bottom right, #784ea7, #ed4569, #f5be1a);
+    background-image: linear-gradient(to bottom right, rgb(14, 207, 255), rgb(208, 255, 0), #ff9100);
     border-radius: 50%;
 }
 
@@ -79,6 +80,7 @@
     margin: 0;
     font-weight: 900;
     letter-spacing: 1px;
+    user-select: none;
 }
 
 .artist-buttons {
@@ -104,24 +106,39 @@
     align-items: center;
     margin: 0;
     padding: 0;
+    text-shadow: 0 0 10px #111;
     padding-left: 30px;
     padding-right: 30px;
-    border: none;
-    border-radius: 10px;
-    font-weight: 600;
+    font-weight: 900;
     letter-spacing: 1px;
     box-sizing: border-box;
     color: #fff;
-    background: none;
-    border: 1px solid #fff;
+    background: linear-gradient(#111, #111) padding-box,
+              linear-gradient(to bottom, #111, #111, #111, rgb(14, 207, 255), rgb(208, 255, 0), #ff9100) border-box;
+    border: 2px solid transparent;
+    border-radius: 15px;
     cursor: pointer;
+    filter: saturate(0);
+    transition: 0.5s;
+}
+
+.artist-buttons-box-button:hover {
+    filter: saturate(1);
+}
+
+.artist-albumlist {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .artist-data .home-main {
     padding-top: 100px;
 }
 
-.artist-page .home-box-item {
+.artist-page .home-box-outline {
+    width: 100%;
+    height: 70px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -130,5 +147,42 @@
     padding: 0;
     margin: 0;
     box-sizing: initial;
-    background: rgba(17,17,17,1);
+}
+
+.artist-page .home-box-outline {
+    height: 70px;
+    width: 100%;
+    margin: 5px;
+}
+
+.artist-page .home-box-outline-bg {
+    height: 66px;
+    width: calc(100% - 4px);
+    margin: 0 auto;
+}
+
+.artist-page .home-box-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 70px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+    .artist-data {
+        flex-direction: column;
+    }
+
+    .artist-data-box {
+        padding-top: 100px;
+        width: 100%;
+        background-color: initial;
+        background-image: linear-gradient(rgba(17,17,17,0.7), rgba(17,17,17,0.7), rgba(17,17,17,0.3), rgba(17,17,17,0.0));
+        padding-bottom: 50px;
+    }
 }

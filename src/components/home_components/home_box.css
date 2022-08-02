@@ -1,25 +1,38 @@
 .home-box-outline {
-    width: auto;
-    height: auto;
-    padding: 2px;
+    position: relative;
+    width: 180px;
+    height: 290px;
     margin: 6px;
-    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0), #784ea7, #ed4569, #f5be1a);
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0), rgb(14, 207, 255), rgb(208, 255, 0), #ff9100);
     border-radius: 12px;
-    filter: saturate(0);
     transition: 0.75s;
 }
 
-.home-box-outline:hover {
-    filter: saturate(1);
+.home-box-outline-bg {
+    height: 286px;
+    width: 176px;
+    background-color: #111;
+    border-radius: 10px;
+    margin: 0 auto;
 }
 
 .home-box-item {
-    width: 160px;
-    height: auto;
-    transition: 0.5s;
-    padding: 10px;
-    background-color: #111;
+    position: absolute;
+    width: 180px;
+    height: 290px;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: 1s;
     border-radius: 10px;
+    margin: 0 auto;
+    backdrop-filter: saturate(0);
+}
+
+.home-box-item:hover {
+    backdrop-filter: saturate(1);
 }
 
 .home-box-item-cover {
@@ -38,8 +51,7 @@
 }
 
 .home-box-item-name {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 15px;
     letter-spacing: 3px;
     height: 100px;
     display: flex;
@@ -71,6 +83,45 @@
         margin-bottom: 10px;
         box-sizing: initial;
     }
+
+    
+.artist-page .home-box-outline {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    box-sizing: initial;
+}
+
+.home-box-outline {
+    height: 70px;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.home-box-outline-bg {
+    height: 66px;
+    width: calc(100% - 4px);
+    margin: 0 auto;
+}
+
+.home-box-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 70px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
     
     .home-box-item-cover {
         height: 50px;
@@ -92,6 +143,6 @@
     }
     
     .home-box-item-name > p {
-        text-align: center;
+        text-align: start;
     }
 }

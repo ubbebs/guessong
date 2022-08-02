@@ -13,6 +13,7 @@ const HomeArtist = ({data}) => {
                 return(
                     <Link to={`/artist/${value.artist_id}`}>
                         <div key={key} className="home-box-outline">
+                            <div className="home-box-outline-bg"></div>
                             <div className="home-box-item">
                                 <div className="home-box-item-cover" style={url}>
                                 </div>

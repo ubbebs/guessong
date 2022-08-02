@@ -70,9 +70,11 @@ const Artist = ({data}) => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="home-main artist-page">
-                                    <p>Album list</p>
-                                    <HomeAlbum data={albumList} />
+                                <div className="artist-albumlist">
+                                    <div className="home-main artist-page">
+                                        <p>Album list</p>
+                                        <HomeAlbum data={albumList} />
+                                    </div>
                                 </div>
                             </div>
                         </div>

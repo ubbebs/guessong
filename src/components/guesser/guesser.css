@@ -9,7 +9,7 @@
 .guesser-box-progress-bar {
     width: 0%;
     height: 10px;
-    background-color: #0f0;
+    background-image: linear-gradient(to bottom right, rgb(14, 207, 255), rgb(208, 255, 0), #ff9100);
     transition: 1s;
     border-radius: 5px;
 }
@@ -39,7 +39,9 @@
 .guesser-box-answer-correct {
     display: none;
     position: absolute;
+    top: 0;
     height: 100%;
+    padding-bottom: 300px;
     width: 100%;
     flex-direction: row;
     opacity: 0;

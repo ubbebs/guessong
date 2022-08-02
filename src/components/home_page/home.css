@@ -39,7 +39,7 @@
     font-family: 'Monoton', cursive;
     font-weight: 100;
     font-size: 5rem;
-    background-image: linear-gradient(to bottom right, #784ea7, #ed4569, #f5be1a);
+    background-image: linear-gradient(to bottom right, rgb(14, 207, 255), rgb(208, 255, 0), #ff9100);
     -webkit-background-clip: text;
     color: transparent;
     text-shadow: 0 0 20px #222;
@@ -52,12 +52,13 @@
     font-style: italic;
     margin: 0;
     letter-spacing: 2px;
+    text-align: center;
 }
 
 .home-main-titleline {
     height: auto;
     padding-bottom: 2px;
-    background-image: linear-gradient(to bottom right, #784ea7, #ed4569, #f5be1a);
+    background-image: linear-gradient(to bottom right, rgb(14, 207, 255), rgb(208, 255, 0), #ff9100);
     margin-left: 15px;
     margin-right: 15px;
 }
@@ -78,7 +79,7 @@
 
 .home-main-title > span {
     margin-left: 25px;
-    font-size: 10px;
+    font-size: 11px;
     color: #888;
 }
 
@@ -88,6 +89,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 10px;
     margin-bottom: 30px;
 }
 
@@ -110,10 +112,10 @@
     .home-main-container {
         width: 100%;
         display: flex;
-        flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
         margin-bottom: 10px;
+        flex-direction: column;
     }
 
     .all {
