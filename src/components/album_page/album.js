@@ -31,7 +31,7 @@ const Album = ({data}) => {
 
                 return(
                     <>
-                        <div className="album-main margin-top" style={cover_url}>
+                        <div className="album-main" style={cover_url}>
                             <div className="album-background d-flex jc-center">
                                 <div className="album-data d-flex ai-center jc-center">
                                     <div className="album-data-box d-flex ai-center jc-center">

@@ -36,14 +36,16 @@ const Artist = ({data}) => {
 
                 return(
                     <>
-                        <div className="artist-main margin-top">
+                        <div className="artist-main">
                             <div className="artist-background" style={bgcover_url}>
                             </div>
                             <div className="artist-background-shadow">
                             </div>
                             <div className="artist-data">
                                 <div className="artist-data-box">
-                                    <div className="artist-cover" style={cover_url}>
+                                    <div className="artist-coverborder">
+                                        <div className="artist-cover" style={cover_url}>
+                                        </div>
                                     </div>
                                     <div className="artist-box">
                                         <div className="artist-box-name">
@@ -68,13 +70,10 @@ const Artist = ({data}) => {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div className="home">
-                            <div className="home-main artist-page">
-                                
-                                <p>Album list</p>
-                                <HomeAlbum data={albumList} />
+                                <div className="home-main artist-page">
+                                    <p>Album list</p>
+                                    <HomeAlbum data={albumList} />
+                                </div>
                             </div>
                         </div>
                     </>

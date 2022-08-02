@@ -16,12 +16,36 @@ const NavBar = () => {
     const [mobile, setMobile] = useState(v_w);
     const [sidebar, setSidebar] = useState(true);
 
+    const setBgFull = () => {
+        document.querySelector('.navbar').style.background = 'linear-gradient(rgba(17,17,17,1), rgba(17,17,17,1)';
+    }
+
+    const setBgGradient = () => {
+        document.querySelector('.navbar').style.background = 'linear-gradient(rgba(17,17,17,1), rgba(0,0,0,0)';
+    }
+
     useEffect(() => {
+        
+        const nav = document.querySelector('.nav');
+        let lastScrollY = window.scrollY;
+
+        window.addEventListener("scroll", () => {
+            if (lastScrollY < window.scrollY) {
+                nav.classList.add('nav-hidden')
+            } else {
+                nav.classList.remove('nav-hidden')
+            }
+
+            lastScrollY = window.scrollY;
+        })
+
         const handleResize = () => {
-          if (window.innerWidth < 1100) {
+          if (window.innerWidth < 1301) {
             setMobile(true);
+            document.querySelector('.closing-button').style.display = 'block';
           } else {
             setMobile(false);
+            document.querySelector('.closing-button').style.display = 'none';
           }
         }
     
@@ -45,28 +69,36 @@ const NavBar = () => {
                             <NavBarItems />
                             </>
                         )}
-                        {mobile && (
-                            sidebar ? (
-                                <div onClick={() => setSidebar(!sidebar)}>
-                                    <p>E</p>
-                                </div>
-                            ) : (
-                                <>
-                                    <div onClick={() => setSidebar(!sidebar)}>
-                                        <p>A</p>
-                                    </div>
-                                    <div className="navbar_mobile">
-                                        <Searchbar />
-                                        <div onClick={() => setSidebar(!sidebar)}>
-                                            <NavBarItems />
-                                        </div>
-                                    </div>
-                                </>
-                            )
-                        )}
+                        <div onClick={() => {
+                            setSidebar(!sidebar)
+                            setBgFull()
+                        }}>
+                            <div className='closing-button'>E</div>
+                        </div>
                     </div>
                 </div>
             </div>
+            {mobile && (
+                sidebar ? (
+                    <> 
+                    </>
+                ) : (
+                    <>
+                        <div className="navbar_mobile">
+                            <div onClick={() => {
+                                setSidebar(!sidebar)
+                                setBgGradient()
+                            }}>
+                                <div>A</div>
+                            </div>
+                            <Searchbar />
+                            <div onClick={() => setSidebar(!sidebar)}>
+                                <NavBarItems />
+                            </div>
+                        </div>
+                    </>
+                )
+            )}
       </>
     )
 }

@@ -19,12 +19,67 @@
     padding: 40px;
 }
 
+.home-main > p {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.home-main-box {
+    padding-top: 10%;
+    padding-bottom: calc(10% + 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+
+.home-main-box > h1 {
+    font-family: 'Monoton', cursive;
+    font-weight: 100;
+    font-size: 5rem;
+    background-image: linear-gradient(to bottom right, #784ea7, #ed4569, #f5be1a);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 20px #222;
+    letter-spacing: 3px;
+}
+
+.home-main-box > p {
+    font-weight: 100;
+    font-size: 20px;
+    font-style: italic;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.home-main-titleline {
+    height: auto;
+    padding-bottom: 2px;
+    background-image: linear-gradient(to bottom right, #784ea7, #ed4569, #f5be1a);
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
 .home-main-title {
     letter-spacing: 5px;
     font-size: 25px;
     padding: 0;
-    margin: 10px;
-    font-weight: 900;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+}
+
+.home-main-title > span {
+    margin-left: 25px;
+    font-size: 10px;
+    color: #888;
 }
 
 .home-main-container {
@@ -33,7 +88,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .all {
@@ -71,5 +126,15 @@
 
     .artist-item-sign, .album-item-sign {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .home-main-box > h1 {
+        font-size: 2.75rem;
+    }
+
+    .home-main-title {
+        margin-left: 0px;
     }
 }

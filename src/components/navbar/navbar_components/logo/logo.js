@@ -7,7 +7,7 @@ import './logo.css';
 const Logo = () => {
     return(
         <div className="navbar-logo">
-            <Link to='/'><span>GUESSONG</span></Link>
+            <Link to='/'><span>G</span></Link>
         </div>
     )
 }

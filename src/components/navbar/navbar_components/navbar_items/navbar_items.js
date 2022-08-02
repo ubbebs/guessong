@@ -8,19 +8,19 @@ const NavBarItems = () => {
     return(
         <div className="navbar-elems">
             <Link to='/artists'>
-                <div>
+                <p>
                     Artists
-                </div>
+                </p>
             </Link>
             <Link to='/albums'>
-                <div>
+                <p>
                     Albums
-                </div>
+                </p>
             </Link>
             <Link to='/'>
-                <div>
+                <p>
                     Playlists
-                </div>
+                </p>
             </Link>
         </div>
     )
