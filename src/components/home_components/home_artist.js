@@ -13,6 +13,7 @@ const HomeArtist = ({data}) => {
     }
 
     useEffect(() => {
+        console.log("replace")
         isLoaded()
     }, [])
 
