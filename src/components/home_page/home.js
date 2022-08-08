@@ -17,6 +17,8 @@ const Home = ({data}) => {
     isLoaded()
   }, [])
 
+  console.log(items)
+
   return (
     <div className="home margin-top">
         <div className="home-main">
