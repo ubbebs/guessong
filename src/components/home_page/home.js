@@ -9,8 +9,6 @@ import './home.css';
 const Home = ({data}) => {
   const [items, setItems] = useState(false)
 
-  console.log(items)
-
   const isLoaded = async () => {
     data.length === 0 ? setItems(false) : setItems(true)
   }
