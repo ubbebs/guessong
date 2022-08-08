@@ -12,6 +12,7 @@ import Artist from './components/artist_page/artist';
 import Guess from './components/guess_page/guess_page';
 
 import './css/App.css';
+import axios from 'axios';
 
 function App() {
   const [artistList, setArtistList] = useState([]);
@@ -20,22 +21,20 @@ function App() {
   const [album5List, setAlbum5List] = useState([]);
   const [trackList, setTrackList] = useState([]);
 
+  const requestGetArtists = Axios.get("https://mysql-guessong-heroku.herokuapp.com/getArtists")
+  const requestGet5Artists = Axios.get("https://mysql-guessong-heroku.herokuapp.com/get5Artists")
+  const requestGetAlbums = Axios.get("https://mysql-guessong-heroku.herokuapp.com/getAlbums")
+  const requestGet5Albums = Axios.get("https://mysql-guessong-heroku.herokuapp.com/get5Albums")
+  const requestGetTracks = Axios.get("https://mysql-guessong-heroku.herokuapp.com/getTracks")
+
   useEffect(() => {
-    Axios.get("https://mysql-guessong-heroku.herokuapp.com/getArtists").then((response) => {
-      setArtistList(response.data);
-    })
-    Axios.get("https://mysql-guessong-heroku.herokuapp.com/get5Artists").then((response) => {
-      setArtist5List(response.data);
-    })
-    Axios.get("https://mysql-guessong-heroku.herokuapp.com/getAlbums").then((response) => {
-      setAlbumList(response.data);
-    })
-    Axios.get("https://mysql-guessong-heroku.herokuapp.com/get5Albums").then((response) => {
-      setAlbum5List(response.data);
-    })
-    Axios.get("https://mysql-guessong-heroku.herokuapp.com/getTracks").then((response) => {
-      setTrackList(response.data);
-    })
+    axios.all([requestGetArtists, requestGet5Artists, requestGetAlbums, requestGet5Albums, requestGetTracks]).then(axios.spread((...responses) => {
+      setArtistList(responses[0].data)
+      setArtist5List(responses[1].data)
+      setAlbumList(responses[2].data)
+      setAlbum5List(responses[3].data)
+      setTrackList(responses[4].data)
+    }))
   }, []);
 
   console.log(artistList, artist5List, albumList, album5List, trackList)
