@@ -10,6 +10,9 @@ const HomeArtist = ({data}) => {
                 const url = {
                     backgroundImage: `url(${value.cover})`
                 }
+                
+                console.log(data)
+
                 return(
                     <Link to={`/artist/${value.artist_id}`}>
                         <div key={key} className="home-box-outline">
