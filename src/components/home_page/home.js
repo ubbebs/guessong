@@ -9,8 +9,13 @@ import './home.css';
 const Home = ({data}) => {
   const [items, setItems] = useState(false)
 
+  const setTrue = () => {
+    document.querySelector('.loadingTitle').getElementsByClassName.opacity = 1
+    setItems(true)
+  }
+
   const isLoaded = async () => {
-    data.length === 0 ? setItems(false) : setItems(true)
+    data.length === 0 ? setItems(false) : setTrue()
   }
 
   useEffect(() => {
@@ -68,7 +73,7 @@ const Home = ({data}) => {
           ) : (
             <>
               <div className="loadingPage">
-                <p>Loading...</p>
+                <p className="loadingTitle">G</p>
               </div>
             </>
           )}

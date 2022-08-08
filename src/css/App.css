@@ -4,9 +4,16 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: red;
+    background-image: linear-gradient(to bottom right, rgb(14, 207, 255), rgb(208, 255, 0), #ff9100);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 100;
+}
+
+.loadingPage > p {
+    color: #111;
+    font-size: 50px;
+    font-weight: 100;
+    transition: 1s;
 }
