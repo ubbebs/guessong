@@ -38,6 +38,8 @@ function App() {
     })
   }, []);
 
+  console.log(artistList, artist5List, albumList, album5List, trackList)
+
   return (
     <Router>
       <ScrollToTop />

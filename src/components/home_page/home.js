@@ -10,7 +10,6 @@ const Home = ({data}) => {
   const [items, setItems] = useState(false)
 
   const isLoaded = async () => {
-    console.log(data.length)
     data.length === 0 ? setItems(false) : setItems(true)
   }
 
@@ -23,9 +22,8 @@ const Home = ({data}) => {
         <div className="home-main">
           <div className='home-main-box'>
             <h1>GUESSONG</h1>
-            <p>*motywacyjny slogan (jutro ustalenia)*</p>
+            <p>*motywacyjny slogan (jutro ogarnę)*</p>
           </div>
-          {console.log(items)}
           {items ? (
             <>
               {console.log(`${items} - true`)}
@@ -68,11 +66,9 @@ const Home = ({data}) => {
             </>
           ) : (
             <>
-              {console.log(`${items} - false`)}
               <p className='information'>Loading...</p>
             </>
           )}
-          {console.log(document.querySelector('.infromation'))}
         </div>
     </div>
   )
