@@ -14,7 +14,7 @@ const Home = ({data}) => {
   }
 
   useEffect(() => {
-    isLoaded()
+    setTimeout(isLoaded(), 1000)
   }, [])
 
   console.log(items)
@@ -67,7 +67,9 @@ const Home = ({data}) => {
             </>
           ) : (
             <>
-              <p className='information'>Loading...</p>
+              <div className="loadingPage">
+                <p>Loading...</p>
+              </div>
             </>
           )}
         </div>

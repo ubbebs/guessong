@@ -1,32 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from 'react-router-dom';
 
 import './home_box.css';
 
 const HomeArtist = ({data}) => {
-    const [items, setItems] = useState(false)
-
-    console.log(items)
-
-    const isLoaded = async () => {
-        data.length === 0 ? setItems(false) : setItems(true)
-    }
-
-    useEffect(() => {
-        console.log("replace")
-        isLoaded()
-    }, [])
-
     return(
         <>
-        {items ? (
-            data.map((value, key) => {
+            {data.map((value, key) => {
                 const url = {
                     backgroundImage: `url(${value.cover})`
                 }
-                
-                console.log(data)
-
                 return(
                     <Link to={`/artist/${value.artist_id}`}>
                         <div key={key} className="home-box-outline">
@@ -43,12 +26,7 @@ const HomeArtist = ({data}) => {
                         </div>
                     </Link>
                 )
-            })
-        ) : (
-            <div className="loadingPage">
-                ŁADOWANIE...
-            </div>
-        )}
+            })}
         </>
     )
 }
