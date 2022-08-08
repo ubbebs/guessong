@@ -23,7 +23,7 @@ const Home = ({data}) => {
         <div className="home-main">
           <div className='home-main-box'>
             <h1>GUESSONG</h1>
-            <p>*motywacyjny slogan (do ustalenia)*</p>
+            <p>*motywacyjny slogan (jutro ustalenia)*</p>
           </div>
           {console.log(items)}
           {items ? (
