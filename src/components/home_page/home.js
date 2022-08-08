@@ -14,7 +14,7 @@ const Home = ({data}) => {
   }
 
   useEffect(() => {
-    setTimeout(isLoaded(), 1000)
+    setTimeout(isLoaded, 1000)
   }, [])
 
   console.log(items)
