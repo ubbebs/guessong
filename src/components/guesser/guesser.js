@@ -23,7 +23,6 @@ const Guesser = ({data, roll, rollCorrect, correct, wrong}) => {
 
     const confirmChange = e => {
         if (e.target.value === data.guessname) {
-            console.log(e.target.value)
             e.target.setAttribute(
                 'style',
                 'background-color: #0a0; transition: 1s'
