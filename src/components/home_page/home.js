@@ -26,7 +26,6 @@ const Home = ({data}) => {
           </div>
           {items ? (
             <>
-              {console.log(`${items} - true`)}
               <Link to="/artists"><p className="home-main-title">Artyści <span>&lt;- wybierz artystę</span></p></Link>
               <div class="home-main-titleline"></div>
               <div className="home-main-container">
