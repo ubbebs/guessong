@@ -10,8 +10,8 @@ const Home = ({data}) => {
   const [items, setItems] = useState(false)
 
   const setTrue = () => {
-    document.querySelector('.loadingTitle').getElementsByClassName.opacity = 1
-    setItems(true)
+    document.querySelector('.loadingPage').getElementsByClassName.opacity = 0
+    setTimeout(setItems(true), 1000)
   }
 
   const isLoaded = async () => {
@@ -36,7 +36,6 @@ const Home = ({data}) => {
               <Link to="/artists"><p className="home-main-title">Artyści <span>&lt;- wybierz artystę</span></p></Link>
               <div class="home-main-titleline"></div>
               <div className="home-main-container">
-
                 <HomeArtist data={data[0]}/>
                 <Link to='/artists'>
                   <div className="home-box-outline">
