@@ -1,3 +1,11 @@
+# Strona umożliwiająca zgadywanie piosenek kilku dodanych artystów
+
+Korzysta z własnej bazy danych SQL, wykorzystując backend Express.js.
+
+Połączenie z bazą niekiedy trwa kilka sekund, przez co elementy na stronie mogą nie zostać wczytane odpowiednio szybko.
+
+Link: https://beautiful-banoffee-f1e4ed.netlify.app/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
